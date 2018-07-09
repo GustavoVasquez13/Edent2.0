@@ -107,18 +107,19 @@ public class InsertarDatosBD {
         }
     }   
     //metodo para insertar pacientes generales a la tabla pacienten se utiliza en el formulario ExpedienteGeneral
-     public void insertarPaciente(String nombre, String apellido ,String direccion, String telefono,String edad,String tipo,String fecha){
+     public void insertarPaciente(String nombre, String apellido ,String direccion, String telefono,String edad,String tipo,String fecha, int estado){
         try {
             PreparedStatement pps = cn.prepareStatement("INSERT INTO pacienten(`nombre_pacte`,`apellido_pacte`,"
-                    + "`direccion_pacte`,`tel_pacte`,`TipoPaciente_id_tipoPaciente`,`edad`,`fecha`)"
-                    + "VALUES(?,?,?,?,?,?,?);");
+                    + "`direccion_pacte`,`tel_pacte`,`edad`,`fecha_registro`,`estado_paciente`,`TipoPaciente_id_tipoPaciente`) "
+                    + "VALUES(?,?,?,?,?,?,?,(SELECT id_tipoPaciente FROM tipopaciente WHERE nombre_tipo='"+tipo+"'));");
             pps.setString(1, nombre);
             pps.setString(2, apellido);
             pps.setString(3, direccion);
             pps.setString(4, telefono);
-            pps.setString(5, tipo);
-            pps.setString(6, edad);
-            pps.setString(7, fecha);
+            //pps.setString(5, tipo);
+            pps.setString(5, edad);
+            pps.setString(6, fecha);
+            pps.setInt(7, estado);
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Guardados");
             con.closeBd();

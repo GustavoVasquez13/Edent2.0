@@ -1,5 +1,5 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2018-06-29 03:53:37.747
+-- Last modification date: 2018-07-07 05:17:00.537
 
 -- tables
 -- Table: Cefalometria
@@ -124,6 +124,7 @@ CREATE TABLE PacienteN (
     estado_paciente bool NULL,
     TipoPaciente_id_tipoPaciente int NOT NULL,
     edad int NOT NULL,
+    fecha_registro date NULL,
     CONSTRAINT PacienteN_pk PRIMARY KEY (id_pacienteN)
 ) COMMENT 'guarda los datos generales de un paciente de categoria normal';
 

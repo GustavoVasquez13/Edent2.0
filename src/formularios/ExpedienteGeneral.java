@@ -251,7 +251,6 @@ public class ExpedienteGeneral extends internalFrameImagen {
 
         lbtipoo.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lbtipoo.setForeground(new java.awt.Color(255, 255, 255));
-        lbtipoo.setText("..");
 
         lblid1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblid1.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,9 +277,9 @@ public class ExpedienteGeneral extends internalFrameImagen {
                         .addComponent(jButton1)
                         .addGap(114, 114, 114)
                         .addComponent(lbtipo)
-                        .addGap(6, 6, 6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbtipoo, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(ayuda, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
@@ -302,7 +301,9 @@ public class ExpedienteGeneral extends internalFrameImagen {
                                 .addGap(32, 32, 32)
                                 .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(38, 38, 38)
-                                .addComponent(lblid1))
+                                .addComponent(lblid1)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblid))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
                                 .addComponent(lblnombre)
@@ -326,9 +327,7 @@ public class ExpedienteGeneral extends internalFrameImagen {
                                 .addGap(5, 5, 5)
                                 .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(10, 10, 10)
-                                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(31, 31, 31)
-                        .addComponent(lblid))
+                                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(347, 347, 347)
@@ -336,7 +335,7 @@ public class ExpedienteGeneral extends internalFrameImagen {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGap(277, 277, 277)
                             .addComponent(lbltitulo))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,65 +350,62 @@ public class ExpedienteGeneral extends internalFrameImagen {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbtipo)
-                                    .addComponent(lbtipoo)))))
+                                .addGap(26, 26, 26)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lbtipoo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lbtipo, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)))))
                     .addComponent(ayuda))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txttip, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel1)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(3, 3, 3)
+                                            .addComponent(lbledad))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(lblid1)
+                                            .addComponent(lblid)))
+                                    .addGap(3, 3, 3)))
+                            .addComponent(txttelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
+                                .addComponent(lbltelefono)))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(lblid))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(lblnombre))
+                            .addComponent(jLabel2)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel1)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addGap(3, 3, 3)
-                                                    .addComponent(lbledad))
-                                                .addComponent(lblid1))
-                                            .addGap(3, 3, 3)))
-                                    .addComponent(txttelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(7, 7, 7)
-                                        .addComponent(lbltelefono)))))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(lblnombre))
-                                    .addComponent(jLabel2)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(lbldireccion))
-                            .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnbuscaredicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btneditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                            .addComponent(txtapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(lbldireccion))
+                    .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnbuscaredicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btneditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
@@ -429,41 +425,41 @@ public class ExpedienteGeneral extends internalFrameImagen {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         if (this.txtnombre.getText().length() == 0 || this.txtapellido.getText().length() == 0|| this.txtedad.getText().length() == 0){
             JOptionPane.showMessageDialog(null, "Debe complementar los campos requeridos");
-            }else{
+        }else{
              // se crean variables para guardar en ellas los datos recibidos de los jtextfield
-      String nombre = this.txtnombre.getText().toUpperCase();
-      String apellido = this.txtapellido.getText().toUpperCase();
-      String direccion = this.txtdireccion.getText().toUpperCase();
-      String telefono = this.txttelefono.getText().toUpperCase();
-      String edad = this.txtedad.getText();
-      String tip=this.txttip.getText();
-    
-      //se crea un objeto de la clase Insertar Datos, en este objeto se almacenaran y enviaran 
-      //a la clase los parametros obtenidos por los jtextfield
-      String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
-      String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
-      String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
-      String fechaA = (year + "-" + mes+ "-" + dia);
-      String date = fechaA; 
-      InsertarDatosBD insertar = new InsertarDatosBD();
-      insertar.insertarPaciente(nombre, apellido, direccion, telefono, edad,tip,date);
-      // se crean variables para guardar en ellas los datos recibidos de los jtextfield
-      limpiarTxt();
-      btcon.setVisible(true);
-       ExpedienteGeneral.fecha.setEnabled(false);
-        ExpedienteGeneral.txtedad.setEnabled(false);
-        ExpedienteGeneral.txttelefono.setEnabled(false);
-        ExpedienteGeneral.txtnombre.setEnabled(false);
-        ExpedienteGeneral.txtapellido.setEnabled(false);
-        ExpedienteGeneral.txtdireccion.setEnabled(false);
-        ExpedienteGeneral.btneditar.setEnabled(false);
-        ExpedienteGeneral.btnbuscaredicion.setEnabled(true);
-        ExpedienteGeneral.btnGuardar.setEnabled(false);
-        ExpedienteGeneral.jButton1.setEnabled(true);
-      
+            String nombre = this.txtnombre.getText().toUpperCase();
+            String apellido = this.txtapellido.getText().toUpperCase();
+            String direccion = this.txtdireccion.getText().toUpperCase();
+            String telefono = this.txttelefono.getText().toUpperCase();
+            String edad = this.txtedad.getText();
+            //String tip=this.txttip.getText();
+            String tip = this.lbtipoo.getText();
+            int estado = 1;
+
+            //se crea un objeto de la clase Insertar Datos, en este objeto se almacenaran y enviaran 
+            //a la clase los parametros obtenidos por los jtextfield
+            String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+            String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
+            String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
+            String fechaA = (year + "-" + mes+ "-" + dia);
+            String date = fechaA; 
+            InsertarDatosBD insertar = new InsertarDatosBD();
+            insertar.insertarPaciente(nombre, apellido, direccion, telefono, edad,tip,date,estado);
+            // se crean variables para guardar en ellas los datos recibidos de los jtextfield
+            
+            limpiarTxt();
+            btcon.setVisible(true);
+            ExpedienteGeneral.fecha.setEnabled(false);
+            ExpedienteGeneral.txtedad.setEnabled(false);
+            ExpedienteGeneral.txttelefono.setEnabled(false);
+            ExpedienteGeneral.txtnombre.setEnabled(false);
+            ExpedienteGeneral.txtapellido.setEnabled(false);
+            ExpedienteGeneral.txtdireccion.setEnabled(false);
+            ExpedienteGeneral.btneditar.setEnabled(false);
+            ExpedienteGeneral.btnbuscaredicion.setEnabled(true);
+            ExpedienteGeneral.btnGuardar.setEnabled(false);
+            ExpedienteGeneral.jButton1.setEnabled(true);
         }
-       
-  
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtapellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidoKeyTyped
