@@ -286,7 +286,9 @@ public class ConsultarDatosBD {
         //se agregan los campos del arreglo al modelo de la tabla
         modelo = new DefaultTableModel(null, titulo);
         //consulta para mostrar los datos de la base de datos
-        sSQL = "SELECT * FROM `pacienten` WHERE `TipoPaciente_id_tipoPaciente` = 1 ORDER BY `id_pacienteN` ASC;";
+        sSQL = "SELECT * FROM `pacienten` " +
+                "inner join tipopaciente on pacienten.TipoPaciente_id_tipoPaciente=tipopaciente.id_tipoPaciente " +
+                "WHERE tipopaciente.nombre_tipo=\"GENERAL\";";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
@@ -297,7 +299,7 @@ public class ConsultarDatosBD {
                 registros[3] = rs.getString("direccion_pacte");
                 registros[4] = rs.getString("tel_pacte");
                 registros[5] = rs.getString("edad");
-                registros[6] = rs.getString("Fecha");
+                registros[6] = rs.getString("fecha_registro");
                 totalRegistros = totalRegistros + 1;
                 modelo.addRow(registros);
             }
