@@ -408,29 +408,26 @@
                   <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
-                          <Component id="lblnombres" min="-2" pref="141" max="-2" attributes="0"/>
-                          <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                          <Component id="lblapellidos" min="-2" pref="153" max="-2" attributes="0"/>
-                          <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
-                          <Component id="lblacceso" min="-2" pref="132" max="-2" attributes="0"/>
-                          <EmptySpace min="448" pref="448" max="-2" attributes="0"/>
-                          <Component id="lbhora" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtconta" max="32767" attributes="0"/>
-                              <Component id="btnadministracion" pref="187" max="32767" attributes="0"/>
-                              <Component id="btnproveedores" max="32767" attributes="0"/>
-                              <Component id="btnexpediente" max="32767" attributes="0"/>
-                              <Component id="txtreportes" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
+                  <Component id="lblnombres" min="-2" pref="141" max="-2" attributes="0"/>
+                  <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
+                  <Component id="lblapellidos" min="-2" pref="153" max="-2" attributes="0"/>
+                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                  <Component id="lblacceso" min="-2" pref="132" max="-2" attributes="0"/>
+                  <EmptySpace min="448" pref="448" max="-2" attributes="0"/>
+                  <Component id="lbhora" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtconta" max="32767" attributes="0"/>
+                      <Component id="btnadministracion" max="32767" attributes="0"/>
+                      <Component id="btnproveedores" max="32767" attributes="0"/>
+                      <Component id="btnexpediente" max="32767" attributes="0"/>
+                      <Component id="txtreportes" min="-2" pref="187" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
