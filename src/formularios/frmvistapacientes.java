@@ -117,50 +117,51 @@ public class frmvistapacientes extends internalFrameImagen{
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6)
-                        .addGap(12, 12, 12)
-                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 31, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel6)
+                .addGap(12, 12, 12)
+                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblcodigo)
-                        .addGap(52, 52, 52)
-                        .addComponent(lblnombre)
-                        .addGap(94, 94, 94)
-                        .addComponent(btnCancelar))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblcodigo)
+                                .addGap(78, 78, 78)
+                                .addComponent(lblnombre)
+                                .addGap(250, 250, 250)
+                                .addComponent(btnCancelar))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(272, 272, 272))))
+                        .addGap(348, 348, 348))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel5)
-                .addGap(43, 43, 43)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30))
+                        .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCancelar)
-                        .addGap(16, 16, 16))))
+                        .addGap(31, 31, 31))))
         );
 
         pack();
@@ -183,7 +184,7 @@ public class frmvistapacientes extends internalFrameImagen{
     }//GEN-LAST:event_txtBuscarKeyTyped
 
     private void jtPacientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtPacientesMousePressed
-            if(evt.getClickCount()==2){
+        if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
             String nombre;
             String apellido,tel,edad,direc,idtipo,id;
@@ -195,17 +196,19 @@ public class frmvistapacientes extends internalFrameImagen{
             edad=jtPacientes.getValueAt(fila, 5).toString();
             idtipo = jtPacientes.getValueAt(fila, 6).toString();
             id= jtPacientes.getValueAt(fila, 0).toString();
+            
             ExpedienteOrtodoncia.txttelefono.setText(tel);
             ExpedienteOrtodoncia.txtedad.setText(edad);
             ExpedienteOrtodoncia.txtdireccion.setText(direc);
             ExpedienteOrtodoncia.txtnombre.setText(nombre);
             ExpedienteOrtodoncia.txtapellido.setText(apellido);
-            ExpedienteOrtodoncia.txttip.setText(id);
+            //ExpedienteOrtodoncia.txttip.setText(id);
             ExpedienteOrtodoncia.txttip2.setText(idtipo);
-            
-            
+            ExpedienteOrtodoncia.lblid.setText(id);
+
             this.dispose();
-        }        
+        }  
+        
         ExpedienteOrtodoncia.txtMotivoC.setEnabled(true);
         ExpedienteOrtodoncia.btneditar.setEnabled(false);
         ExpedienteOrtodoncia.btnbuscaredicion.setEnabled(false);
@@ -217,8 +220,6 @@ public class frmvistapacientes extends internalFrameImagen{
         ExpedienteOrtodoncia.jfecha.setEnabled(true);
        //  ExpedienteOrtodoncia.btndientes.setEnabled(true);
         ExpedienteOrtodoncia.txtMotivoC.setBackground(Color.LIGHT_GRAY);
-        
-
     }//GEN-LAST:event_jtPacientesMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
