@@ -20,7 +20,7 @@ public class ExpedienteGeneral extends internalFrameImagen {
     public ExpedienteGeneral() {
         initComponents();
        setImagenw("fondo.jpg");
-       btcon.setVisible(false);
+       //btcon.setVisible(false);
         ExpedienteGeneral.fecha.setEnabled(false);
         ExpedienteGeneral.txtedad.setEnabled(false);
         ExpedienteGeneral.txttelefono.setEnabled(false);
@@ -448,7 +448,7 @@ public class ExpedienteGeneral extends internalFrameImagen {
             // se crean variables para guardar en ellas los datos recibidos de los jtextfield
             
             limpiarTxt();
-            btcon.setVisible(true);
+            //btcon.setVisible(true);
             ExpedienteGeneral.fecha.setEnabled(false);
             ExpedienteGeneral.txtedad.setEnabled(false);
             ExpedienteGeneral.txttelefono.setEnabled(false);
