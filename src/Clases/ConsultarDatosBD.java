@@ -242,15 +242,16 @@ public class ConsultarDatosBD {
         DefaultTableModel modelo;
         //Arreglo para crear los campos necesarios de la tabla donde se mostraran los datos
         String[] titulo
-                = {"Id","Nombre","Apellido","Direccion", "Telefono","Edad","id","tipo"};
+                = {"Id","Nombre","Apellido","Direccion", "Telefono","Edad","Id tipo","tipo"};
         String[] registros = new String[8];
         totalRegistros = 0;
         //se agregan los campos del arreglo al modelo de la tabla
         modelo = new DefaultTableModel(null, titulo);
         //consulta para mostrar los datos de la base de datos
-        sSQL = "SELECT `id_pacienteN`,`nombre_pacte`,`apellido_pacte`,`direccion_pacte`,`tel_pacte`,`estado_paciente`,`edad`,`fecha`,`TipoPaciente_id_tipoPaciente`,`nombre_tipo`" 
-                +"FROM pacienten INNER JOIN tipopaciente "
-                + "on pacienten.TipoPaciente_id_tipoPaciente=tipopaciente.id_tipoPaciente WHERE tipopaciente.nombre_tipo = 'ORTODONCIA'";
+        sSQL = "SELECT `id_pacienteN`,`nombre_pacte`,`apellido_pacte`,`direccion_pacte`,`tel_pacte`,`estado_paciente`,`edad`,`fecha_registro`, "
+                + "`TipoPaciente_id_tipoPaciente`,`nombre_tipo` FROM pacienten "
+                + "INNER JOIN tipopaciente on pacienten.TipoPaciente_id_tipoPaciente = tipopaciente.id_tipoPaciente "
+                + "WHERE tipopaciente.nombre_tipo = 'ORTODONCIA'";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
